@@ -1,9 +1,9 @@
 # Base Image
-FROM python:3.7.2-slim
+FROM python:3.7
 
 # Install netcat
-RUN apt-get update && \
-    apt-get -y install netcat && \
+RUN apt-get update
+RUN apt-get -y install netcat-openbsd &&\
     apt-get clean
 
 # set working directory
